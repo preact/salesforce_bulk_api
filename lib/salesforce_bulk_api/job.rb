@@ -178,6 +178,7 @@ module SalesforceBulkApi
                   state << (batch_state)
                   @batch_ids.delete(batch_id)
                 end
+                sleep(1) # take a break
               end
               break if @batch_ids.empty?
             else
